@@ -1,0 +1,12 @@
+version: '3'
+services:
+  jenkins-container:
+    image: "jenkins:latest"
+    restart: always
+    environment:
+      - "TZ=America/Mexico_City"
+    ports:
+      - "85:8080"
+      - "86:5000"
+    volumes:
+      - ./data:/var/jenkins_home
