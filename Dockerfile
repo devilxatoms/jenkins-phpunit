@@ -8,7 +8,5 @@ USER root
 RUN apt-get update
 RUN apt-get -y -f install php7.0 php7.0-fpm
 
-RUN mkdir ~/bin
-WORKDIR ~/bin
-RUN curl -sS https://getcomposer.org/installer | php
-RUN mv composer.phar composer
+# Install composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/home/jenkins
