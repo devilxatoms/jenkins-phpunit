@@ -1,7 +1,9 @@
 FROM jenkins:latest
 MAINTAINER Brayan Caldera <ing.brayan.cm@gmail.com>
 
-RUN jenkins apt-get update
+# Jenkins is using jenkins user, we need root to install things.
+USER root
+
 RUN apt-get install --no-cache add \
         bash \
         ca-certificates \
