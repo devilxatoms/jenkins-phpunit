@@ -1,7 +1,7 @@
 FROM jenkins:latest
 MAINTAINER Brayan Caldera <ing.brayan.cm@gmail.com>
 
-RUN apt-get update
+RUN jenkins apt-get update
 RUN apt-get install --no-cache add \
         bash \
         ca-certificates \
