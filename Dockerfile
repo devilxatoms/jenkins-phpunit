@@ -6,7 +6,7 @@ USER root
 
 # Install php packages.
 RUN apt-get update
-RUN apt-get -y -f install php7-cli php7-dev php7-curl curl php-pear ant
+RUN apt-get -y -f install php7.0 php7.0-fpm
 
 RUN mkdir ~/bin
 WORKDIR ~/bin
