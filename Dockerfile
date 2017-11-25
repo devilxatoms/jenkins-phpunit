@@ -1,7 +1,8 @@
 FROM jenkins:latest
 MAINTAINER Brayan Caldera <ing.brayan.cm@gmail.com>
 
-RUN apk --no-cache add \
+RUN apt-get update
+RUN apt-get install --no-cache add \
         bash \
         ca-certificates \
         git \
